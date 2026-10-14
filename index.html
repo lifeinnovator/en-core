@@ -3,31 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>En-Core · 인코어 | 다시 한 번, 더 나은 방향으로</title>
-<meta name="description" content="행복을 위한 생애 전 과정의 설계 교육프로그램. 학교 진로교육, 청년·기업 교육, 중장년·은퇴 교육까지 스스로 자기 삶을 설계하도록 돕는 교육을 운영합니다.">
-<meta name="author" content="En-Core 인코어">
+<title>En-Core · 인코어 | Life Innovation Lab의 생애설계 교육</title>
+<meta name="description" content="Life Innovation Lab이 기획·개발하는 생애설계 교육 프로그램 En-Core. AI 시대 자기존중과 삶의 주도성을 바탕으로 진로·커리어·은퇴 전환을 탐색합니다. 시범 운영 협의 가능.">
+<meta name="author" content="Life Innovation Lab">
 <meta name="theme-color" content="#0B1524">
 
-<!-- ⚠️ 배포 후 아래 SITE_URL 세 줄을 실제 주소로 바꿔주세요 (예: https://en-core.vercel.app) -->
-<link rel="canonical" href="https://en-core.vercel.app/">
-<meta property="og:url" content="https://en-core.vercel.app/">
-<meta property="og:image" content="https://en-core.vercel.app/og-image.png">
+<!-- 공식 배포 주소 -->
+<link rel="canonical" href="https://en-core-gold.vercel.app/">
+<meta property="og:url" content="https://en-core-gold.vercel.app/">
+<meta property="og:image" content="https://en-core-gold.vercel.app/og-image.png">
 
 <!-- 카카오톡·페이스북 공유 미리보기 -->
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="En-Core 인코어">
+<meta property="og:site_name" content="En-Core · Life Innovation Lab">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:title" content="En-Core · 인코어 | 다시 한 번, 더 나은 방향으로">
-<meta property="og:description" content="행복을 위한 생애 전 과정의 설계 교육프로그램. 학생의 첫 진로부터 은퇴 이후의 삶까지, 스스로 설계하는 법을 가르칩니다.">
+<meta property="og:title" content="En-Core · 인코어 | Life Innovation Lab의 생애설계 교육">
+<meta property="og:description" content="Life Innovation Lab의 생애설계 교육 프로그램. 학생의 진로부터 은퇴 이후의 삶까지, 자신의 가치를 발견하고 다음 단계를 설계합니다. 기획·개발 중, 시범 운영 협의 가능.">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="En-Core 인코어 - 다시 한 번, 더 나은 방향으로">
 
 <!-- 트위터 -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="En-Core · 인코어 | 다시 한 번, 더 나은 방향으로">
-<meta name="twitter:description" content="행복을 위한 생애 전 과정의 설계 교육프로그램.">
-<meta name="twitter:image" content="https://en-core.vercel.app/og-image.png">
+<meta name="twitter:title" content="En-Core · 인코어 | Life Innovation Lab의 생애설계 교육">
+<meta name="twitter:description" content="Life Innovation Lab이 기획·개발하는 생애설계 교육. AI 시대, 자기존중을 바탕으로 삶의 다음 단계를 설계합니다.">
+<meta name="twitter:image" content="https://en-core-gold.vercel.app/og-image.png">
 
 <!-- 파비콘 -->
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -38,7 +38,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 
 <style>
   :root{
@@ -63,7 +63,10 @@
   }
 
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;scroll-padding-top:90px}
+  a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid var(--spot-2);outline-offset:5px}
+  .operator{margin-top:12px;font-size:.88rem;color:var(--muted)}
+  .status-note{margin:20px auto 0;color:var(--spot);font-size:.9rem;font-weight:600}
   body{
     background:var(--ink);
     color:var(--on-ink);
@@ -138,7 +141,7 @@
   .nav-toggle{display:none}
 
   /* ================= HERO ================= */
-  .hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;isolation:isolate}
+  .hero{position:relative;min-height:100svh;padding:120px 0 100px;display:flex;align-items:center;overflow:hidden;isolation:isolate}
   .hero-bg{position:absolute;inset:0;z-index:-2;background:
       radial-gradient(120% 80% at 50% -10%, #16294a 0%, var(--ink) 55%, #070E1A 100%);}
   /* 스포트라이트 풀 */
@@ -322,7 +325,7 @@
   .act-label{display:flex;align-items:center;gap:18px;margin-bottom:26px}
   .act-label .rn{font-family:"Fraunces",serif;font-size:1.05rem;font-weight:600;color:var(--spot-2);
     letter-spacing:.12em;white-space:nowrap}
-  .act-label .txt{font-family:"Gowun Batang",serif;font-weight:700;font-size:1.2rem;color:var(--on-paper);white-space:nowrap}
+  .act-label .txt{font-family:"Gowun Batang",serif;font-weight:700;font-size:1.2rem;color:var(--on-paper);min-width:0}
   .act-label .rule{flex:1;height:1px;background:var(--paper-line)}
   .prog-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
   .prog-grid-3{grid-template-columns:repeat(3,1fr)}
@@ -448,12 +451,23 @@
   .foot-in{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
   .foot .brand .mark{font-size:1.5rem}
   .foot .slogan{font-family:"Gowun Batang",serif;color:#B9C6DA;margin-top:10px;font-size:.98rem}
-  .foot .cols{display:flex;gap:44px;font-size:.9rem}
+  .foot .cols{display:flex;flex-wrap:wrap;gap:44px;font-size:.9rem}
   .foot .cols a{display:block;color:var(--muted);padding:5px 0;transition:color .25s}
   .foot .cols a:hover{color:var(--spot)}
   .foot .cols .h{color:#E9E1D2;font-weight:600;margin-bottom:6px;font-family:"Pretendard"}
   .foot .legal{width:100%;margin-top:38px;padding-top:22px;border-top:1px solid rgba(255,255,255,.07);
     display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.8rem;color:#5C6B82}
+
+  /* 프로그램 선택과 자주 묻는 질문 */
+  .lab-background{margin:24px auto 0;max-width:660px;color:var(--on-paper-soft);font-size:1rem}
+  .lab-background h2{font-size:1.45rem;color:var(--on-paper);margin-bottom:14px}
+  .lab-background p+p{margin-top:12px}
+  .prog-link{display:block;margin-top:20px;font-size:.88rem;font-weight:600;color:var(--navy);text-decoration:underline;text-underline-offset:5px}
+  .core-l .prog-link{color:var(--spot)}
+  .faq-list{max-width:780px;margin:0 auto}
+  .faq-list details{padding:20px 0;border-bottom:1px solid var(--paper-line)}
+  .faq-list summary{cursor:pointer;font-weight:600}
+  .faq-list p{margin-top:14px;color:var(--on-paper-soft)}
 
   /* ================= reveal ================= */
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
@@ -495,12 +509,13 @@
     .pillar:nth-child(n){transform:none}
   }
 </style>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
 
 <!-- NAV -->
-<header class="nav" id="nav">
+<header class="nav" id="nav" aria-label="주 메뉴">
   <div class="wrap nav-in">
     <a href="#top" class="brand" aria-label="En-Core 인코어">
       <span class="mark">En-Core</span><span class="ko">인코어</span>
@@ -508,7 +523,7 @@
     <nav class="nav-links">
       <a class="link" href="#premise">소개</a>
       <a class="link" href="#journey">생애 여정</a>
-      <a class="link" href="#stages">사업 영역</a>
+      <a class="link" href="#stages">교육 영역</a>
       <a class="link" href="#program">프로그램</a>
       <a class="btn btn-spot nav-cta" href="contact.html">교육 문의 <span class="arw">→</span></a>
     </nav>
@@ -517,21 +532,22 @@
 </header>
 
 <!-- HERO -->
-<header class="hero" id="top">
+<header class="hero" id="top" aria-label="인코어 소개">
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="spot-pool" aria-hidden="true"></div>
   <div class="floor-glow" aria-hidden="true"></div>
   <div class="wrap hero-content">
-    <p class="kicker">En-Core · 인코어</p>
+    <p class="kicker">En-Core · by Life Innovation Lab</p>
     <h1>
       <span class="line">다시 한 번,</span>
       <span class="line">더 나은 <em>방향</em>으로.</span>
     </h1>
-    <p class="sub">진로는 하나의 목적지가 아니라, 내가 설계하는 여러 개의 막(幕)입니다.<br class="brk">
-       학생의 첫 무대부터 은퇴 이후의 삶까지, 스스로 설계하는 법을 가르칩니다.</p>
+    <p class="sub">AI 시대에도, 내 삶의 방향을 정하는 주체는 나입니다.<br class="brk">
+       학생의 진로부터 은퇴 이후의 삶까지, 자신의 가치를 발견하고 다음 단계를 설계합니다.</p>
+    <p class="status-note">기획·개발 중 · 시범 운영 협의 가능</p>
     <div class="cta-row">
       <a class="btn btn-spot" href="#program">프로그램 살펴보기 <span class="arw">→</span></a>
-      <a class="btn btn-ghost" href="#premise">인코어는 어떤 곳인가요</a>
+      <a class="btn btn-ghost" href="#premise">Life Innovation Lab 소개</a>
     </div>
   </div>
   <div class="scroll-hint" aria-hidden="true"><span class="bar"></span>SCROLL</div>
@@ -542,20 +558,25 @@
 <section class="premise block" id="premise">
   <div class="wrap premise-grid">
     <div class="reveal">
-      <span class="eyebrow center">En-Core란</span>
+      <span class="eyebrow center">Life Innovation Lab · En-Core</span>
       <p class="lede">‘앙코르’는 충분히 준비된 무대가 만들어내는 <b>‘한 번 더’의 순간</b>입니다.<br class="brk">
          인코어는 그 순간을 교육으로 옮겨, 누구나 자신의 <b>가능성을 다시 발견</b>하도록 돕습니다.</p>
-      <p class="ident">인코어는 삶을 대신 설계해 주는 회사가 아니라,
-         <b>스스로 자기 삶을 설계하는 법을 가르치는 ‘생애 설계 교육’</b>을 운영합니다.
+      <p class="ident">인코어는 <b>Life Innovation Lab이 기획·개발하는 생애설계 교육 프로그램</b>입니다.
+         자신의 경험과 가능성을 돌아보고, 다음 삶과 일을 구체적인 실행 계획으로 연결합니다.
          설계의 주체는 언제나 참가자 본인입니다.</p>
+      <div class="lab-background">
+        <h2>AI 시대, 사람의 자기존중 회복</h2>
+        <p>Life Innovation Lab은 경영혁신 컨설턴트이자 은퇴설계전문가(ARPS)인 박윤규가 준비하는 프로젝트입니다. 기술과 역할이 바뀌는 시기에, 사람이 자신의 가치를 이해하고 삶의 주도성을 회복할 수 있도록 콘텐츠와 프로그램을 만듭니다.</p>
+        <p>인코어는 이 질문을 교육으로 풀어가는 프로그램입니다. AI 활용법과 함께 자신의 경험을 돌아보는 질문, 타인과 연결되는 활동, 직접 선택하는 실행 계획을 담습니다.</p>
+      </div>
     </div>
     <div class="meaning">
       <div class="m reveal d1"><span class="idx">01</span><h3>가능성의 재발견</h3>
-        <p>스스로 몰랐던 방향을 찾아내는 ‘두 번째 기회’를 발견하도록 돕습니다.</p></div>
+        <p>성과나 직함만으로 자신을 평가하지 않고, 쌓아온 경험과 가능성에서 자신의 가치를 발견합니다.</p></div>
       <div class="m reveal d2"><span class="idx">02</span><h3>연결 · En</h3>
         <p>학교와 지역사회, 기업 현장을 잇는 살아있는 교육을 지향합니다.</p></div>
       <div class="m reveal d3"><span class="idx">03</span><h3>핵심 역량 · Core</h3>
-        <p>AI가 대체할 수 없는 사람 고유의 힘을 키우는 데 집중합니다.</p></div>
+        <p>AI를 활용하면서도 스스로 질문하고 판단하며, 선택에 책임지는 힘을 기릅니다.</p></div>
     </div>
   </div>
 </section>
@@ -565,13 +586,13 @@
   <div class="wrap">
     <div class="head reveal">
       <span class="eyebrow center">생애 여정 설계 · Life Journey Design</span>
-      <h2>은퇴는 무대의 끝이 아니라, 가장 뜨거운 다음 무대입니다</h2>
-      <p>인코어는 마음·돈·일 세 축으로 스스로 삶을 설계하는 법을 가르칩니다.<br class="brk">나이에 따라 강조점만 달라질 뿐, 질문은 하나로 이어집니다.</p>
+      <h2>삶의 전환점마다, 나의 다음 무대를 설계합니다</h2>
+      <p>인코어는 마음·돈·일 세 축을 연결해 스스로 삶을 설계하는 교육을 준비합니다.<br class="brk"> 나이에 따라 강조점만 달라질 뿐, 질문은 하나로 이어집니다.</p>
     </div>
 
     <div class="axes">
       <div class="axis reveal d1"><span class="ic">마음</span><h4>정신적 설계</h4>
-        <p>정체성·의미·관계<br>“일이 없어도 나는 누구인가?”</p></div>
+        <p>정체성·의미·관계<br>“역할이 달라져도 나는 누구인가?”</p></div>
       <div class="axis reveal d2"><span class="ic">돈</span><h4>재무적 설계</h4>
         <p>생애를 조망하는 재무 리터러시<br>“어떤 조건에서 살 것인가?”</p></div>
       <div class="axis reveal d3"><span class="ic">일</span><h4>앵콜 커리어</h4>
@@ -607,29 +628,29 @@
   <div class="wrap">
     <div class="head reveal">
       <span class="eyebrow">세 개의 무대</span>
-      <h2>학생부터 은퇴 이후까지,<br class="brk">생애 전 과정을 이어서 설계합니다</h2>
-      <p>학교에서 쌓은 경험이 기업과 지자체로 이어지고,<br class="brk">은퇴자의 이야기가 다시 학생의 교실로 돌아옵니다.</p>
+      <h2>학생부터 은퇴 이후까지,<br class="brk"> 생애 전 과정을 이어서 설계합니다</h2>
+      <p>학교·기업·지자체의 교육 담당자와 함께,<br class="brk"> 참가자의 생애 단계와 기관의 목적에 맞는 과정을 설계합니다.</p>
     </div>
     <div class="stage-cards">
       <article class="stage-card reveal d1">
         <span class="tag">Line A</span>
         <h3>학교 진로교육</h3>
         <span class="who">고등학생 · 진로전담교사</span>
-        <p>AI 시대 진로탐색과 고교학점제 설계, 현직자 진로체험까지. ‘진로 : 생애 설계’로 첫 무대를 엽니다.</p>
+        <p>AI 시대 직업의 변화를 살펴보고, 자신의 강점과 관심을 진로·과목 선택에 연결합니다. 학교 여건에 맞춰 탐색 활동과 캠프를 기획합니다.</p>
         <ul><li>AI 진로탐색</li><li>고교학점제 설계</li><li>진로체험·캠프</li></ul>
       </article>
       <article class="stage-card reveal d2">
         <span class="tag">Line B</span>
         <h3>청년 · 기업 교육</h3>
         <span class="who">청년 구직자 · 재직자</span>
-        <p>재직자가 내일 쓰는 AI 실무교육과, 청년이 취업까지 연결되는 역량 프로그램을 운영합니다.</p>
-        <ul><li>재직자 AI 직무교육</li><li>청년 취업역량</li><li>현직자 연계</li></ul>
+        <p>재직자는 자신의 업무에 AI를 적용할 방법을 찾고, 청년은 경험과 강점을 이력서·포트폴리오로 표현하는 과정을 준비합니다.</p>
+        <ul><li>재직자 AI 직무교육</li><li>청년 취업역량</li><li>경험·강점 정리</li></ul>
       </article>
       <article class="stage-card c-line reveal d3">
         <span class="tag">Line C</span>
         <h3>중장년 · 은퇴 교육</h3>
         <span class="who">신중년 · 퇴직 예정자</span>
-        <p>앵콜 커리어·은퇴 후 삶 설계부터 AI 기초역량 교육까지 함께합니다. 기업 경력지원서비스와 지자체 50플러스 채널을 겨냥합니다.</p>
+        <p>퇴직 전후의 역할과 관계, 일상과 재무 여건을 함께 돌아봅니다. 기업과 지역 교육기관의 대상에 맞춰 생애전환·AI 기초 과정을 기획합니다.</p>
         <ul><li>C-1 앵콜 커리어 설계</li><li>C-2 인생 2막 캠프</li><li>C-3 은퇴 전환 리부트</li><li>C-4 AI 기초역량 과정</li></ul>
       </article>
     </div>
@@ -651,13 +672,13 @@
     </div>
     <div class="pillar-grid">
       <article class="pillar reveal d1"><span class="num">01</span><h3>AI 리터러시·활용</h3>
-        <p>모든 프로그램에 생성형 AI 실습 모듈을 내장합니다. ‘쓰는 사람’으로 만듭니다.</p><span class="halo"></span></article>
+        <p>대상과 목적에 맞춰 AI 실습을 구성하고, 결과 검토와 개인정보 보호를 함께 다룹니다.</p><span class="halo"></span></article>
       <article class="pillar reveal d2"><span class="num">02</span><h3>실무형 설계</h3>
-        <p>프로젝트 기반 학습(PBL)과 짧은 모듈(마이크로러닝)로 바로 쓰는 결과를 남깁니다.</p><span class="halo"></span></article>
-      <article class="pillar reveal d3"><span class="num">03</span><h3>체험·현직자 연결</h3>
-        <p>현직자 멘토와 직업체험을 콘텐츠 중심에 배치해 ‘살아있는’ 학습을 만듭니다.</p><span class="halo"></span></article>
-      <article class="pillar reveal d4"><span class="num">04</span><h3>인간 고유 역량</h3>
-        <p>AI가 못 하는 맥락 이해·공감·창의를 균형 있게 설계합니다.</p><span class="halo"></span></article>
+        <p>직접 탐색하고 작성하는 활동을 중심으로, 교육 이후 실천할 계획을 남기도록 설계합니다.</p><span class="halo"></span></article>
+      <article class="pillar reveal d3"><span class="num">03</span><h3>경험·현장 연결</h3>
+        <p>참가자의 경험과 실제 사례를 학습에 연결합니다. 현직자 참여와 현장 체험은 기관 여건에 따라 협의합니다.</p><span class="halo"></span></article>
+      <article class="pillar reveal d4"><span class="num">04</span><h3>자기존중·주도성</h3>
+        <p>자신과 타인의 맥락을 이해하고, 내게 중요한 것을 판단하며 다음 행동을 선택하는 연습을 합니다.</p><span class="halo"></span></article>
     </div>
   </div>
 </section>
@@ -666,29 +687,31 @@
 <section class="playbill block" id="program">
   <div class="wrap">
     <div class="head reveal">
-      <span class="eyebrow center">오늘의 프로그램</span>
+      <span class="eyebrow center">기획 중인 프로그램</span>
       <h2>생애주기 프로그램 9종</h2>
-      <p>모든 과정은 참가자가 직접 만든 결과물을 남깁니다.<br class="brk">배우고 끝나는 것이 아니라, 손에 쥐고 돌아갑니다.</p>
+      <p>아래 9개 과정은 기획·개발 중이며, 기관과 시범 운영을 협의할 수 있습니다.<br class="brk"> 시간·인원·결과물은 기획안 기준이며, 실제 운영 범위는 협의 후 확정합니다.</p>
     </div>
 
     <div class="act">
       <div class="act-label reveal"><span class="rn">ACT I</span><span class="txt">학교 진로교육</span><span class="rule"></span></div>
       <div class="prog-grid">
-        <article class="prog reveal d1">
+        <article id="A-1" class="prog reveal d1">
           <span class="code">A-1</span>
           <h4>미래직업 탐험대</h4>
           <p class="target">고등학교 1~2학년 · 4차시</p>
           <p class="concept">“AI가 바꾸는 직업 세계를, 직접 체험하며 나만의 진로를 설계한다.”</p>
           <p class="flexbadge">4차시 · 학급·학년 단위 · 확장 2~8차시</p>
           <span class="out"><span class="dot"></span>산출물 · 개인 진로 로드맵</span>
+          <a class="prog-link" href="contact.html?program=A-1">A-1 시범 운영 문의 →</a>
         </article>
-        <article class="prog reveal d2">
+        <article id="A-2" class="prog reveal d2">
           <span class="code">A-2</span>
           <h4>고교학점제 진로설계 캠프</h4>
           <p class="target">고등학교 1학년 · 1일 캠프</p>
           <p class="concept">“내 진로에 맞는 과목을, 데이터와 함께 전략적으로 선택한다.”</p>
           <p class="flexbadge">1일 캠프 6h · 또는 4차시 분산형</p>
-          <span class="out"><span class="dot"></span>산출물 · 3개년 수강 계획서 + 확정 진로설계서</span>
+          <span class="out"><span class="dot"></span>산출물 · 3개년 과목 선택 계획안 + 진로설계 초안</span>
+          <a class="prog-link" href="contact.html?program=A-2">A-2 시범 운영 문의 →</a>
         </article>
       </div>
     </div>
@@ -696,21 +719,23 @@
     <div class="act">
       <div class="act-label reveal"><span class="rn">ACT II</span><span class="txt">청년 · 기업 교육</span><span class="rule"></span></div>
       <div class="prog-grid">
-        <article class="prog reveal d1">
+        <article id="B-1" class="prog reveal d1">
           <span class="code">B-1</span>
           <h4>실무자 AI 활용 부트캠프</h4>
           <p class="target">중소기업 재직자 · 1일 또는 4주</p>
-          <p class="concept">“내일 당장 업무에 쓰는 AI, 이수율이 아니라 업무 변화를 만든다.”</p>
+          <p class="concept">“내 업무에서 시작해, AI 활용 방법과 결과 검토 기준을 함께 만든다.”</p>
           <p class="flexbadge">특강 3h · 1일 8h · 블렌디드 4주</p>
           <span class="out"><span class="dot"></span>산출물 · 프롬프트 템플릿 + 업무개선 기획안</span>
+          <a class="prog-link" href="contact.html?program=B-1">B-1 시범 운영 문의 →</a>
         </article>
-        <article class="prog reveal d2">
+        <article id="B-2" class="prog reveal d2">
           <span class="code">B-2</span>
           <h4>청년 취업역량 점프업</h4>
           <p class="target">지자체 청년·구직자 · 2~3일 집중</p>
           <p class="concept">“취업 준비 = 스펙이 아니라 ‘연결하고 증명하는 힘’.”</p>
           <p class="flexbadge">특강 1일 · 3일 집중 · 과정형 3주</p>
-          <span class="out"><span class="dot"></span>산출물 · AI 이력서 + 취업 포트폴리오</span>
+          <span class="out"><span class="dot"></span>산출물 · AI를 활용한 이력서 초안 + 취업 포트폴리오</span>
+          <a class="prog-link" href="contact.html?program=B-2">B-2 시범 운영 문의 →</a>
         </article>
       </div>
     </div>
@@ -718,43 +743,47 @@
     <div class="act">
       <div class="act-label reveal"><span class="rn">ACT III</span><span class="txt">중장년 · 은퇴 교육 · 앵콜 커리어와 삶 설계</span><span class="rule"></span></div>
       <div class="prog-grid prog-grid-4">
-        <article class="prog reveal d1">
+        <article id="C-1" class="prog reveal d1">
           <span class="code">C-1</span>
           <h4>앵콜 커리어 설계</h4>
           <p class="target">50세 전후 재직자·전직 예정자 · 기업 경력지원서비스</p>
-          <p class="concept">“퇴직은 끝이 아니라, 준비된 사람이 여는 다음 무대다.”</p>
+          <p class="concept">“쌓아온 경험을 돌아보고, 퇴직 이후의 역할과 일을 탐색한다.”</p>
           <p class="flexbadge">특강 3h · 1일 8h · 4주 과정형</p>
           <span class="out"><span class="dot"></span>산출물 · 마음·일·돈 통합 생애전환 로드맵</span>
+          <a class="prog-link" href="contact.html?program=C-1">C-1 시범 운영 문의 →</a>
         </article>
-        <article class="prog reveal d2">
+        <article id="C-2" class="prog reveal d2">
           <span class="code">C-2</span>
           <h4>인생 2막 생애설계 캠프</h4>
           <p class="target">지자체 신중년(50~64세) · 50플러스센터</p>
           <p class="concept">“돈이 아니라 ‘어떻게 살 것인가’부터. 있는 것에서 다시 시작한다.”</p>
           <p class="flexbadge">특강 2.5h · 1일 6h · 5주 과정형</p>
-          <span class="out"><span class="dot"></span>산출물 · 비재무 6대 영역 기반 실행 로드맵</span>
+          <span class="out"><span class="dot"></span>산출물 · 관계·건강·일상 등을 점검한 실행 로드맵</span>
+          <a class="prog-link" href="contact.html?program=C-2">C-2 시범 운영 문의 →</a>
         </article>
-        <article class="prog reveal d3">
+        <article id="C-3" class="prog reveal d3">
           <span class="code">C-3</span>
           <h4>은퇴 전환 리부트</h4>
-          <p class="target">은퇴 초입(60대 초반) · 은퇴 우울·고립 위험 구간</p>
-          <p class="concept">“가장 흔들리는 첫 1년을, 혼자가 아니라 함께 통과한다.”</p>
+          <p class="target">은퇴 전후 · 역할과 일상의 변화를 경험하는 분</p>
+          <p class="concept">“달라진 일상과 관계를 돌아보고, 나에게 맞는 생활 리듬을 찾는다.”</p>
           <p class="flexbadge">소그룹 6~10인 · 주1회×4회차 코칭</p>
-          <span class="out"><span class="dot"></span>산출물 · 나의 지속 약속 + 지지 공동체</span>
+          <span class="out"><span class="dot"></span>산출물 · 나의 일상 실천 계획 + 관계 지도</span>
+          <a class="prog-link" href="contact.html?program=C-3">C-3 시범 운영 문의 →</a>
         </article>
-        <article class="prog reveal d4">
+        <article id="C-4" class="prog reveal d4">
           <span class="code">C-4</span>
           <h4>AI 기초역량 과정</h4>
           <p class="target">중장년·신중년 · 50플러스센터·지자체 평생교육</p>
           <p class="concept">“AI는 젊은 사람만의 것이 아닙니다. 불안에서 자신감으로.”</p>
           <p class="flexbadge">특강 2~3h · 1일 집중 5h · 주1회×5주</p>
           <span class="out"><span class="dot"></span>산출물 · AI 안전 수칙 + 나의 AI 활용 계획서</span>
+          <a class="prog-link" href="contact.html?program=C-4">C-4 시범 운영 문의 →</a>
         </article>
       </div>
     </div>
 
     <!-- 공통 축 X-1 -->
-    <div class="core-act">
+    <div class="core-act" id="X-1">
       <div class="core-band reveal">
         <div class="core-grid">
           <div class="core-l">
@@ -762,19 +791,20 @@
             <span class="code">X-1</span>
             <h3>질문하는 힘</h3>
             <p class="quote">“답은 AI가 준다. 질문은 내가 한다.”</p>
-            <p class="desc">AI가 답을 무한히 공급할수록, 답의 값은 떨어지고 질문의 값은 오릅니다. 좋은 프롬프트를 쓰는 법은 <b>기술</b>이지만, 무엇이 물을 가치가 있는지 아는 것은 <b>인문</b>입니다. 학생·직장인·중장년 누구에게나 필요한, 인코어가 중심에 두는 과정입니다.</p>
+            <p class="desc">AI와 함께 답을 탐색할수록, <b>무엇을 묻고 어떻게 판단할지</b>가 중요해집니다. 내 경험에서 질문을 찾고, 근거와 다른 관점을 살펴보며, 나에게 중요한 선택을 정리합니다. Life Innovation Lab의 자기존중과 삶의 주도성을 교육으로 연결하는 공통 과정입니다.</p>
             <p class="flexbadge">특강 2h · 1일 집중 5h · 주1회×4주 · 전 세대 적용</p>
-            <span class="out"><span class="dot"></span>산출물 · 평생 품고 갈 나의 질문 목록</span>
+            <span class="out"><span class="dot"></span>산출물 · 나의 질문 목록 + 다음 행동 계획</span>
+            <a class="prog-link" href="contact.html?program=X-1">X-1 시범 운영 문의 →</a>
           </div>
           <div class="core-r">
             <div class="ladder">
-              <div class="rung top"><span class="lv">5</span><span class="qt">“그래서 무엇이 중요한가?”</span><span class="ai">오직 인간만</span></div>
-              <div class="rung"><span class="lv">4</span><span class="qt">“다른 사람 눈에는?”</span><span class="ai">인간의 영역</span></div>
-              <div class="rung"><span class="lv">3</span><span class="qt">“정말 그런가?”</span><span class="ai">인간의 영역</span></div>
-              <div class="rung"><span class="lv">2</span><span class="qt">“왜 그런가?”</span><span class="ai">AI도 어느 정도</span></div>
-              <div class="rung"><span class="lv">1</span><span class="qt">“무엇인가?”</span><span class="ai">AI가 아주 잘함</span></div>
+              <div class="rung top"><span class="lv">5</span><span class="qt">“그래서 무엇이 중요한가?”</span><span class="ai">가치·선택</span></div>
+              <div class="rung"><span class="lv">4</span><span class="qt">“다른 사람 눈에는?”</span><span class="ai">관점·공감</span></div>
+              <div class="rung"><span class="lv">3</span><span class="qt">“정말 그런가?”</span><span class="ai">근거 확인</span></div>
+              <div class="rung"><span class="lv">2</span><span class="qt">“왜 그런가?”</span><span class="ai">원인 탐색</span></div>
+              <div class="rung"><span class="lv">1</span><span class="qt">“무엇인가?”</span><span class="ai">정보 이해</span></div>
             </div>
-            <p class="ladder-cap">질문 사다리 · 위로 갈수록 AI는 물러납니다</p>
+            <p class="ladder-cap">질문 사다리 · 정보 이해에서 나의 판단과 선택으로</p>
           </div>
         </div>
       </div>
@@ -787,8 +817,8 @@
   <div class="wrap">
     <div class="head reveal">
       <span class="eyebrow center">진행 절차</span>
-      <h2>문의부터 마무리까지,<br class="brk">이렇게 함께합니다</h2>
-      <p>교안과 자료는 이미 완성되어 있습니다.<br class="brk">기관의 사정에 맞춰 조정하는 일부터 시작합니다.</p>
+      <h2>문의부터 마무리까지,<br class="brk"> 이렇게 함께합니다</h2>
+      <p>현재는 교육과정과 자료를 개발하는 단계입니다.<br class="brk"> 시범 운영의 목적과 가능한 범위를 함께 확인하는 일부터 시작합니다.</p>
     </div>
     <div class="timeline">
       <div class="step lit reveal"><span class="when">첫 번째</span>
@@ -796,13 +826,26 @@
         <p>교육 대상과 인원, 가능한 일정을 알려주세요. 예산 범위를 함께 주시면 그 안에서 가능한 방식을 정리해 드립니다. 아직 정해진 것이 없어도 괜찮습니다.</p></div>
       <div class="step reveal"><span class="when">두 번째</span>
         <h4>맞춤 설계와 제안</h4>
-        <p>같은 과정도 2시간 특강부터 여러 회차 과정까지 조립할 수 있습니다. 기관의 일정과 목적에 맞춰 차시와 활동을 조정한 제안서와 견적을 보내드립니다.</p></div>
+        <p>기관의 목적과 일정에 맞춰 차시·활동·결과물을 조정합니다. 개발 현황과 강사·장소·도구 등 운영 조건을 확인한 뒤 제안 범위와 비용을 안내합니다.</p></div>
       <div class="step reveal"><span class="when">세 번째</span>
-        <h4>현장 운영</h4>
-        <p>해당 분야의 경험을 가진 강사가 진행합니다. 강의를 듣기만 하는 시간이 아니라, 참가자가 직접 자기 결과물을 만들어 가는 워크숍으로 운영합니다.</p></div>
+        <h4>시범 운영과 피드백</h4>
+        <p>협의한 범위에서 참가자가 직접 탐색하고 작성하는 활동을 진행합니다. 참가자와 담당자의 의견을 모아 난이도·시간·자료를 보완합니다.</p></div>
       <div class="step reveal"><span class="when">네 번째</span>
         <h4>결과 정리</h4>
-        <p>참가자 만족도 조사와 함께, 어떤 결과물이 나왔는지 정리해 전해드립니다. 학교는 생활기록부 기재에, 기관은 성과 보고에 그대로 활용하실 수 있습니다.</p></div>
+        <p>협의한 활동 기록과 결과물을 정리하고, 다음 운영의 개선점을 확인합니다. 기관 보고에 필요한 자료의 범위와 형식은 사전에 협의합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="journey block" id="faq">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow center">문의 전 안내</span><h2>함께 확인할 내용</h2></div>
+    <div class="faq-list">
+      <details><summary>지금 교육을 신청할 수 있나요?</summary><p>현재 9개 과정은 기획·개발 중입니다. 학교·기업·지자체 등 기관과 시범 운영을 협의할 수 있으며, 일정과 운영 가능 여부는 상담 후 확정합니다.</p></details>
+      <details><summary>시간·인원·비용은 어떻게 정하나요?</summary><p>표시된 시간과 결과물은 기획안입니다. 교육 목적, 참가자의 경험, 인원, 장소와 예산을 확인해 실제 범위를 정합니다. AI 실습 도구·계정과 기기 준비 여부도 함께 협의합니다.</p></details>
+      <details><summary>어떤 과정을 골라야 할지 모르겠어요.</summary><p>문의 페이지에서 ‘상황에 맞는 과정을 추천받고 싶습니다’를 선택해 주세요. 대상과 해결하고 싶은 과제를 적어 주시면 함께 방향을 살펴보겠습니다.</p></details>
+      <details><summary>은퇴설계 교육은 무엇을 다루나요?</summary><p>역할·관계·일상과 재무 여건을 돌아보고 자신의 실행 계획을 세우는 교육입니다. 개인별 투자상품 추천이나 심리 진단·치료를 제공하는 과정은 아닙니다.</p></details>
     </div>
   </div>
 </section>
@@ -813,9 +856,9 @@
   <div class="wrap in reveal">
     <p class="kicker">Encore</p>
     <h2>당신의 무대에도,<br><em>앙코르</em>를 더할 시간.</h2>
-    <p>교안과 자료는 이미 준비되어 있습니다.<br class="brk">일정과 대상을 알려주시면, 그에 맞춰 설계해 드립니다.<br class="brk">제안·견적·시범 운영 모두 문의해 주세요.</p>
+    <p>Life Innovation Lab과 함께 교육의 다음 단계를 준비해 보세요.<br class="brk"> 대상과 목적을 알려주시면, 개발 중인 과정의 시범 운영 가능 범위를 함께 살펴보겠습니다.</p>
     <div class="cta-row">
-      <a class="btn btn-spot" href="contact.html">교육 문의하기 <span class="arw">→</span></a>
+      <a class="btn btn-spot" href="contact.html">시범 운영 문의하기 <span class="arw">→</span></a>
       <a class="btn btn-ghost" href="#program">프로그램 다시 보기</a>
     </div>
     <p class="contact">직접 연락 · <a href="mailto:life_innovator@naver.com">life_innovator@naver.com</a></p>
@@ -830,32 +873,33 @@
       <div>
         <div class="brand"><span class="mark serif-en">En-Core</span></div>
         <p class="slogan">한 번 더, 더 깊이, 더 나답게.</p>
+        <p class="operator">기획·개발 · Life Innovation Lab</p>
       </div>
       <div class="cols">
         <div>
           <div class="h">프로그램</div>
-          <a href="#program">Act I · A-1 미래직업 탐험대</a>
-          <a href="#program">Act I · A-2 고교학점제 진로설계</a>
-          <a href="#program">Act II · B-1 AI 활용 부트캠프</a>
-          <a href="#program">Act II · B-2 청년 취업역량 점프업</a>
-          <a href="#program">Act III · C-1 앵콜 커리어 설계</a>
-          <a href="#program">Act III · C-2 인생 2막 생애설계</a>
-          <a href="#program">Act III · C-3 은퇴 전환 리부트</a>
-          <a href="#program">Act III · C-4 AI 기초역량 과정</a>
-          <a href="#program">The Core · X-1 질문하는 힘</a>
+          <a href="#A-1">Act I · A-1 미래직업 탐험대</a>
+          <a href="#A-2">Act I · A-2 고교학점제 진로설계</a>
+          <a href="#B-1">Act II · B-1 AI 활용 부트캠프</a>
+          <a href="#B-2">Act II · B-2 청년 취업역량 점프업</a>
+          <a href="#C-1">Act III · C-1 앵콜 커리어 설계</a>
+          <a href="#C-2">Act III · C-2 인생 2막 생애설계</a>
+          <a href="#C-3">Act III · C-3 은퇴 전환 리부트</a>
+          <a href="#C-4">Act III · C-4 AI 기초역량 과정</a>
+          <a href="#X-1">The Core · X-1 질문하는 힘</a>
         </div>
         <div>
           <div class="h">바로가기</div>
           <a href="#premise">소개</a>
-          <a href="#stages">사업 영역</a>
+          <a href="#stages">교육 영역</a>
           <a href="#run">진행 절차</a>
           <a href="contact.html">문의</a>
         </div>
       </div>
     </div>
     <div class="legal">
-      <span>© 2026 En-Core (인코어). All rights reserved.</span>
-      <span>진로교육 · 지자체 · 기업 교육 프로그램</span>
+      <span>© 2026 Life Innovation Lab · En-Core (인코어).</span>
+      <span>생애설계 교육 · 기획·개발 중</span>
     </div>
   </div>
 </footer>

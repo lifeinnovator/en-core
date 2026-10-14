@@ -3,29 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>교육 문의 | En-Core 인코어</title>
-<meta name="description" content="En-Core 교육 프로그램 문의. 대상과 일정을 알려주시면 예산에 맞춘 제안서와 견적을 보내드립니다.">
-<meta name="author" content="En-Core 인코어">
+<title>시범 운영 문의 | En-Core · Life Innovation Lab</title>
+<meta name="description" content="Life Innovation Lab이 개발 중인 En-Core 교육 프로그램의 시범 운영 문의. 대상·목적·일정에 맞춰 운영 가능 범위를 함께 협의합니다.">
+<meta name="author" content="Life Innovation Lab">
 <meta name="theme-color" content="#0B1524">
 <meta name="robots" content="noindex, follow">
 
-<!-- ⚠️ 배포 후 아래 SITE_URL 세 줄을 실제 주소로 바꿔주세요 (index.html과 동일한 주소) -->
-<link rel="canonical" href="https://en-core.vercel.app/contact.html">
-<meta property="og:url" content="https://en-core.vercel.app/contact.html">
-<meta property="og:image" content="https://en-core.vercel.app/og-image.png">
+<!-- 공식 배포 주소 -->
+<link rel="canonical" href="https://en-core-gold.vercel.app/contact.html">
+<meta property="og:url" content="https://en-core-gold.vercel.app/contact.html">
+<meta property="og:image" content="https://en-core-gold.vercel.app/og-image.png">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="En-Core 인코어">
+<meta property="og:site_name" content="En-Core · Life Innovation Lab">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:title" content="교육 문의 | En-Core 인코어">
-<meta property="og:description" content="대상과 일정을 알려주시면 예산에 맞춘 제안서와 견적을 보내드립니다.">
+<meta property="og:title" content="시범 운영 문의 | En-Core · Life Innovation Lab">
+<meta property="og:description" content="기획·개발 중인 생애설계 교육 프로그램의 시범 운영을 Life Innovation Lab과 협의하세요.">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="En-Core 인코어 교육 문의">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="교육 문의 | En-Core 인코어">
-<meta name="twitter:description" content="대상과 일정을 알려주시면 예산에 맞춘 제안서와 견적을 보내드립니다.">
-<meta name="twitter:image" content="https://en-core.vercel.app/og-image.png">
+<meta name="twitter:title" content="시범 운영 문의 | En-Core · Life Innovation Lab">
+<meta name="twitter:description" content="기획·개발 중인 생애설계 교육 프로그램의 시범 운영을 Life Innovation Lab과 협의하세요.">
+<meta name="twitter:image" content="https://en-core-gold.vercel.app/og-image.png">
 
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -35,7 +35,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 
 
 <style>
@@ -61,7 +61,10 @@
   }
 
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;scroll-padding-top:90px}
+  a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid var(--spot-2);outline-offset:5px}
+  .operator{margin-top:12px;font-size:.88rem;color:var(--muted)}
+  .status-note{margin:20px auto 0;color:var(--spot);font-size:.9rem;font-weight:600}
   body{
     background:var(--ink);
     color:var(--on-ink);
@@ -320,7 +323,7 @@
   .act-label{display:flex;align-items:center;gap:18px;margin-bottom:26px}
   .act-label .rn{font-family:"Fraunces",serif;font-size:1.05rem;font-weight:600;color:var(--spot-2);
     letter-spacing:.12em;white-space:nowrap}
-  .act-label .txt{font-family:"Gowun Batang",serif;font-weight:700;font-size:1.2rem;color:var(--on-paper);white-space:nowrap}
+  .act-label .txt{font-family:"Gowun Batang",serif;font-weight:700;font-size:1.2rem;color:var(--on-paper);min-width:0}
   .act-label .rule{flex:1;height:1px;background:var(--paper-line)}
   .prog-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
   .prog-grid-3{grid-template-columns:repeat(3,1fr)}
@@ -392,7 +395,7 @@
   .step p{color:var(--on-paper-soft);font-size:.98rem;max-width:560px}
 
   /* ================= 문의 폼 ================= */
-  .inquiry{position:relative;z-index:2;background:var(--paper);color:var(--on-paper)}
+  .inquiry{padding-top:8px;position:relative;z-index:2;background:var(--paper);color:var(--on-paper)}
   .inq-head{text-align:center;max-width:660px;margin:0 auto 40px}
   .inq-head h2{font-size:clamp(1.7rem,3.6vw,2.6rem);color:var(--on-paper)}
   .inq-head p{margin-top:14px;color:var(--on-paper-soft)}
@@ -419,6 +422,7 @@
   .btn-send:hover{transform:translateY(-2px);box-shadow:0 18px 40px -14px rgba(242,179,77,.85)}
   .inq-alt{text-align:center;margin-top:22px;font-size:.88rem;color:var(--on-paper-soft)}
   .inq-alt a{color:var(--spot-2);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(217,138,43,.4)}
+  .form-note{margin-bottom:20px;font-size:.85rem;color:var(--on-paper-soft)}
   .hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
   @media(max-width:700px){
     .frow{grid-template-columns:1fr;gap:16px}
@@ -446,7 +450,7 @@
   .foot-in{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
   .foot .brand .mark{font-size:1.5rem}
   .foot .slogan{font-family:"Gowun Batang",serif;color:#B9C6DA;margin-top:10px;font-size:.98rem}
-  .foot .cols{display:flex;gap:44px;font-size:.9rem}
+  .foot .cols{display:flex;flex-wrap:wrap;gap:44px;font-size:.9rem}
   .foot .cols a{display:block;color:var(--muted);padding:5px 0;transition:color .25s}
   .foot .cols a:hover{color:var(--spot)}
   .foot .cols .h{color:#E9E1D2;font-weight:600;margin-bottom:6px;font-family:"Pretendard"}
@@ -506,12 +510,14 @@
   .page-hero h1{font-size:clamp(2.1rem,4.6vw,3.1rem);color:#FBF6EC;line-height:1.28}
   .page-hero p{margin-top:16px;color:#C6D2E2;font-size:1.02rem;max-width:560px;margin-left:auto;margin-right:auto}
 </style>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
 
 <body>
 <div class="grain" aria-hidden="true"></div>
 
 <!-- NAV -->
-<header class="nav" id="nav">
+<header class="nav" id="nav" aria-label="주 메뉴">
   <div class="wrap nav-in">
     <a href="index.html" class="brand" aria-label="En-Core 인코어">
       <span class="mark">En-Core</span><span class="ko">인코어</span>
@@ -519,7 +525,7 @@
     <nav class="nav-links">
       <a class="link" href="index.html#premise">소개</a>
       <a class="link" href="index.html#journey">생애 여정</a>
-      <a class="link" href="index.html#stages">사업 영역</a>
+      <a class="link" href="index.html#stages">교육 영역</a>
       <a class="link" href="index.html#program">프로그램</a>
       <a class="btn btn-spot nav-cta" href="contact.html">교육 문의 <span class="arw">→</span></a>
     </nav>
@@ -528,45 +534,45 @@
 </header>
 
 <!-- PAGE HERO -->
-<header class="page-hero">
+<header class="page-hero" aria-label="시범 운영 문의 안내">
   <div class="wrap">
     <a class="back" href="index.html">← 처음으로</a>
-    <p class="kicker">En-Core · 인코어</p>
-    <h1>어떤 교육이 필요하신가요</h1>
-    <p>학교든 기업이든 지자체든, 대상과 일정을 알려주시면<br class="brk">예산에 맞춰 제안서와 견적을 보내드립니다.</p>
+    <p class="kicker">En-Core · by Life Innovation Lab</p>
+    <h1>시범 운영을 함께 준비합니다</h1>
+    <p>현재 프로그램은 기획·개발 중이며 시범 운영을 협의할 수 있습니다.<br class="brk"> 대상과 목적을 알려주시면 Life Innovation Lab에서 운영 가능 범위를 함께 확인하겠습니다.</p>
   </div>
 </header>
 
 <main>
-<section class="inquiry block" id="contact" style="padding-top:8px">
+<section class="inquiry block" id="contact">
   <div class="wrap">
-    <div class="inq-wrap reveal">
+    <div class="inq-wrap">
       <form action="https://formsubmit.co/life_innovator@naver.com" method="POST">
         <!-- 설정값 -->
-        <input type="hidden" name="_subject" value="[En-Core] 교육 문의가 접수되었습니다">
+        <input type="hidden" name="_subject" value="[Life Innovation Lab · En-Core] 시범 운영 문의">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+        <input type="text" name="_honey" aria-label="이 항목은 비워두세요" class="hp" tabindex="-1" autocomplete="off">
 
         <div class="frow">
           <div class="fld">
             <label for="org">기관 · 기업명<span class="req">*</span></label>
-            <input type="text" id="org" name="기관·기업명" required placeholder="예) 인코어고등학교">
+            <input type="text" id="org" name="기관·기업명" autocomplete="organization" required placeholder="예) 인코어고등학교">
           </div>
           <div class="fld">
             <label for="name">담당자 성함<span class="req">*</span></label>
-            <input type="text" id="name" name="담당자" required placeholder="예) 김인코">
+            <input type="text" id="name" name="담당자" autocomplete="name" required placeholder="예) 김인코">
           </div>
         </div>
 
         <div class="frow">
           <div class="fld">
             <label for="email">회신받을 이메일<span class="req">*</span></label>
-            <input type="email" id="email" name="이메일" required placeholder="name@example.com">
+            <input type="email" id="email" name="이메일" autocomplete="email" required placeholder="name@example.com">
           </div>
           <div class="fld">
             <label for="tel">연락처</label>
-            <input type="tel" id="tel" name="연락처" placeholder="010-0000-0000">
+            <input type="tel" id="tel" name="연락처" autocomplete="tel" placeholder="010-0000-0000">
           </div>
         </div>
 
@@ -596,14 +602,14 @@
         <div class="frow">
           <div class="fld full">
             <label for="when">희망 시기 · 형태</label>
-            <input type="text" id="when" name="희망 시기·형태" placeholder="예) 5월 중 1일 캠프 / 미정">
+            <input type="text" id="when" name="희망 시기·형태" placeholder="예) 희망 월·주차 / 1일 캠프 / 미정">
           </div>
         </div>
 
         <div class="frow">
           <div class="fld full">
             <label for="msg">문의 내용</label>
-            <textarea id="msg" name="문의 내용" placeholder="필요하신 교육이나 궁금한 점을 편하게 적어 주세요. 예산 범위를 알려주시면 그에 맞춰 제안드립니다."></textarea>
+            <textarea id="msg" name="문의 내용" placeholder="교육 목적과 기대하는 변화, 예산 범위 등을 적어 주세요. 참가자의 개인정보나 건강 정보는 적지 않아도 됩니다."></textarea>
           </div>
         </div>
 
@@ -612,10 +618,11 @@
           <span>문의 답변을 위해 입력하신 정보를 수집·이용하는 데 동의합니다. 수집한 정보는 답변 목적으로만 사용하며, 처리 완료 후 지체 없이 파기합니다.</span>
         </label>
 
-        <button type="submit" class="btn-send">문의 보내기</button>
+        <p class="form-note">문의 내용은 외부 전송 서비스 FormSubmit을 통해 Life Innovation Lab의 이메일로 전달됩니다. 문의는 운영 확정이나 결제 신청이 아닙니다.</p>
+        <button type="submit" class="btn-send">시범 운영 문의 보내기</button>
       </form>
 
-      <p class="inq-alt">전화나 메일이 편하시면 <a href="mailto:life_innovator@naver.com">life_innovator@naver.com</a> 으로 보내주셔도 됩니다.</p>
+      <p class="inq-alt">이메일로 직접 문의하려면 <a href="mailto:life_innovator@naver.com">life_innovator@naver.com</a> 으로 보내주셔도 됩니다.</p>
     </div>
   </div>
 </section>
@@ -630,37 +637,46 @@
       <div>
         <div class="brand"><span class="mark serif-en">En-Core</span></div>
         <p class="slogan">한 번 더, 더 깊이, 더 나답게.</p>
+        <p class="operator">기획·개발 · Life Innovation Lab</p>
       </div>
       <div class="cols">
         <div>
           <div class="h">프로그램</div>
-          <a href="index.html#program">Act I · A-1 미래직업 탐험대</a>
-          <a href="index.html#program">Act I · A-2 고교학점제 진로설계</a>
-          <a href="index.html#program">Act II · B-1 AI 활용 부트캠프</a>
-          <a href="index.html#program">Act II · B-2 청년 취업역량 점프업</a>
-          <a href="index.html#program">Act III · C-1 앵콜 커리어 설계</a>
-          <a href="index.html#program">Act III · C-2 인생 2막 생애설계</a>
-          <a href="index.html#program">Act III · C-3 은퇴 전환 리부트</a>
-          <a href="index.html#program">Act III · C-4 AI 기초역량 과정</a>
-          <a href="index.html#program">The Core · X-1 질문하는 힘</a>
+          <a href="index.html#A-1">Act I · A-1 미래직업 탐험대</a>
+          <a href="index.html#A-2">Act I · A-2 고교학점제 진로설계</a>
+          <a href="index.html#B-1">Act II · B-1 AI 활용 부트캠프</a>
+          <a href="index.html#B-2">Act II · B-2 청년 취업역량 점프업</a>
+          <a href="index.html#C-1">Act III · C-1 앵콜 커리어 설계</a>
+          <a href="index.html#C-2">Act III · C-2 인생 2막 생애설계</a>
+          <a href="index.html#C-3">Act III · C-3 은퇴 전환 리부트</a>
+          <a href="index.html#C-4">Act III · C-4 AI 기초역량 과정</a>
+          <a href="index.html#X-1">The Core · X-1 질문하는 힘</a>
         </div>
         <div>
           <div class="h">바로가기</div>
           <a href="index.html#premise">소개</a>
-          <a href="index.html#stages">사업 영역</a>
+          <a href="index.html#stages">교육 영역</a>
           <a href="index.html#run">진행 절차</a>
           <a href="contact.html">문의</a>
         </div>
       </div>
     </div>
     <div class="legal">
-      <span>© 2026 En-Core (인코어). All rights reserved.</span>
-      <span>진로교육 · 지자체 · 기업 교육 프로그램</span>
+      <span>© 2026 Life Innovation Lab · En-Core (인코어).</span>
+      <span>생애설계 교육 · 기획·개발 중</span>
     </div>
   </div>
 </footer>
 
 <script>
+  // Accept only an existing program code; never render URL input as HTML.
+  const programCode = new URLSearchParams(window.location.search).get('program');
+  const programSelect = document.getElementById('prog');
+  const selectedProgram = Array.from(programSelect.options).find(option =>
+    /^[ABCX]-[1-4]$/.test(programCode || '') && option.value.startsWith(programCode + ' ')
+  );
+  if(selectedProgram) programSelect.value = selectedProgram.value;
+
   const nav = document.getElementById('nav');
   const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
   onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
