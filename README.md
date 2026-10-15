@@ -1,14 +1,18 @@
-# En-Core 랜딩페이지 — 배포 안내
+# En·Core 랜딩페이지 — 배포 안내
 
-## 현재 프로젝트 (2026-10-14 확인)
+## 현재 프로젝트 (2026-10-15 확인)
 
-- 기획·개발: **Life Innovation Lab**, 생애설계 교육 프로그램 **En-Core(인코어)**.
+- 기획·개발: **Life Innovation Lab**, 생애설계 교육 프로그램 **En·Core(인코어)**.
 - 현재 단계: **기획·개발 중, 기관과 시범 운영 협의 가능**. 과정 시간·인원·산출물은 기획안이며 운영 실적을 의미하지 않습니다.
 - 운영 주소: https://en-core-gold.vercel.app/
 - 원본 저장소: https://github.com/lifeinnovator/en-core (`main`).
-- 구성: HTML 2개 + 정적 이미지. CSS·JavaScript는 HTML 내부에 있으며 패키지 설치나 빌드가 필요 없습니다.
+- 구성: HTML 2개 + 정적 이미지. 페이지 CSS·JavaScript는 HTML 내부에, 공통 로고 스타일·이미지는 `assets/brand/`에 있으며 패키지 설치나 빌드가 필요 없습니다.
 - 배포: GitHub 커밋의 Vercel 상태에서 연결 프로젝트 `lifeinnovators-projects/en-core` 확인. 배포 후에는 반드시 운영 주소에서 내용을 검증합니다.
 - 상세 점검·업데이트 배경·미확인 항목: [docs/2026-10-14-update.md](docs/2026-10-14-update.md).
+
+### 브랜드 선택 (2026-10-15)
+
+Life Innovation Lab은 Type 1, En·Core는 클래식 세리프 시안 1을 잠정 적용했습니다. 두 페이지의 브랜드 자산은 `assets/brand/`에 있으며 [브랜드 적용 기록](docs/2026-10-15-branding.md)에 원본과 재생성 방법을 기록했습니다.
 
 ### 여기에서 수정하고 확인하기
 
