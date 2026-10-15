@@ -12,7 +12,7 @@
 
 ### 브랜드 선택 (2026-10-15)
 
-Life Innovation Lab은 Type 1, En·Core는 클래식 세리프 시안 1을 잠정 적용했습니다. 두 페이지의 브랜드 자산은 `assets/brand/`에 있으며 [브랜드 적용 기록](docs/2026-10-15-branding.md)에 원본과 재생성 방법을 기록했습니다.
+Life Innovation Lab은 Type 1, En·Core는 클래식 세리프 시안 1을 잠정 적용했습니다. 두 페이지의 브랜드 자산은 `assets/brand/`에 있으며 [브랜드 적용 기록](docs/2026-10-15-branding.md)에 원본과 표시 방법을 기록했습니다.
 
 ### 여기에서 수정하고 확인하기
 

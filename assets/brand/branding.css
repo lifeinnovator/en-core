@@ -1,8 +1,13 @@
 /* Selected identities: Life Innovation Lab Type 1 and En·Core classic serif. */
+/* A navy backdrop keeps artwork blending consistent in the fixed header. */
+header.nav,header.nav.scrolled{background:#0b1524}
 .nav .brand{align-items:center;gap:10px;flex-shrink:0}
 .lil-symbol{width:44px;height:44px;object-fit:contain;flex-shrink:0;clip-path:circle(44% at 50% 50.5%)}
-.encore-wordmark{display:block;width:174px;height:auto}
-.foot .encore-wordmark{width:190px}
+/* Display the approved artwork itself. Frame: x=490, y=240, 1190 x 208.
+   Lighten blending integrates its navy presentation background with this dark theme. */
+.encore-wordmark{display:block;position:relative;width:190px;aspect-ratio:1190 / 208;overflow:hidden;flex-shrink:0;mix-blend-mode:lighten}
+.encore-wordmark img{position:absolute;display:block;width:182.521%;max-width:none;height:auto;left:-41.1765%;top:-115.3846%;filter:contrast(1.15)}
+.foot .encore-wordmark{width:220px}
 .foot-in > div:first-child{max-width:100%}
 .footer-lab{margin-top:22px}
 .lab-lockup{display:block;position:relative;width:320px;max-width:100%}
