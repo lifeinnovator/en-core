@@ -13,7 +13,7 @@ header.nav,header.nav.scrolled{background:#0b1524}
 .lab-lockup{display:block;position:relative;width:320px;max-width:100%}
 .lab-lockup img{display:block;width:100%;height:auto}
 /* Preserve the original symbol/red dot; brighten only the wordmark and slogan. */
-.lab-lockup .lab-lockup-light-text{position:absolute;inset:0;filter:brightness(0) invert(1);clip-path:inset(0 0 0 32.5%);pointer-events:none}
+.lab-lockup .lab-lockup-light-text{position:absolute;inset:0;filter:brightness(0) invert(1);clip-path:inset(0 0 0 35%);pointer-events:none}
 .lab-summary{margin-top:30px;color:var(--muted);font-size:.85rem;line-height:1.8}
 .foot .legal{margin-top:18px}
 @media(max-width:1040px){
