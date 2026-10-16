@@ -4,7 +4,7 @@
 
 - 기획·개발: **Life Innovation Lab**, 생애설계 교육 프로그램 **En·Core(인코어)**.
 - 현재 사이트 안내 기준(2026-10-15 사용자 수정 지시): **프로그램이 준비되어 있으며 기관 요청에 따라 운영 가능**. 교육 구성과 일정은 대상·목적에 맞춰 안내합니다. 이전의 개발 중·시범 운영 안내는 본문과 메타데이터에서 제거했습니다.
-- 운영 주소: https://en-core-gold.vercel.app/
+- 운영 주소: https://encore.lifeinnovation.kr/
 - 원본 저장소: https://github.com/lifeinnovator/en-core (`main`).
 - 구성: HTML 2개 + 정적 이미지. 페이지 CSS·JavaScript는 HTML 내부에, 공통 로고 스타일·이미지는 `assets/brand/`에 있으며 패키지 설치나 빌드가 필요 없습니다.
 - 배포: GitHub 커밋의 Vercel 상태에서 연결 프로젝트 `lifeinnovators-projects/en-core` 확인. 배포 후에는 반드시 운영 주소에서 내용을 검증합니다.
