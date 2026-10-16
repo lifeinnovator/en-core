@@ -1,0 +1,23 @@
+/* Shared reading rhythm. Older browsers fall back to the existing word wrapping. */
+h1,h2,h3,h4{ text-wrap:balance }
+p,li,summary,.output-copy,.who,.agree span{ text-wrap:pretty }
+.copy-line{text-wrap:balance}
+.copy-unit{display:inline-block;max-width:100%;vertical-align:top}
+.prog .out,.core-l .out{max-width:100%;align-items:flex-start}
+.out .dot{flex-shrink:0;margin-top:.55em}
+.output-copy{min-width:0}
+/* Keep semantic breaks on desktop; mobile paragraphs remain continuous. */
+@media(min-width:901px){
+  .copy-line,.copy-sentence{display:block}
+  .copy-sentence + .copy-sentence{margin-top:.35em}
+  .prog-grid .prog{display:flex;flex-direction:column;align-items:flex-start}
+  .prog .prog-link{margin-top:auto;padding-top:20px}
+  .stage-card ul{margin-top:auto;padding-top:18px}
+}
+/* Four narrow cards are hard to read at laptop/tablet widths. */
+@media(min-width:901px) and (max-width:1199px){
+  .prog-grid-4,.pillar-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:900px){
+  .copy-line,.copy-sentence{display:inline}
+}

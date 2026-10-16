@@ -252,6 +252,12 @@
   .stop .frame{display:inline-block;margin-top:10px;font-size:.74rem;font-weight:600;color:var(--spot-2);
     background:var(--paper-2);border:1px solid var(--paper-line);border-radius:999px;padding:3px 10px}
 
+  /* Desktop journey copy follows semantic phrases; mobile keeps natural wrapping. */
+  @media(min-width:901px){
+    .stop .journey-phrase{display:block}
+    .stop p{min-height:4.65em}
+  }
+
   /* ================= 세 무대 (종이 틴트) ================= */
   .stages{position:relative;z-index:2;background:var(--paper-2);color:var(--on-paper)}
   .stages .head{max-width:720px;margin-bottom:52px}
@@ -479,9 +485,11 @@
     .axes{grid-template-columns:1fr;max-width:420px}
     .rail-line{display:none}
     .stops{grid-template-columns:1fr;gap:0}
-    .stop{text-align:left;display:grid;grid-template-columns:auto 1fr;column-gap:16px;align-items:start;padding:12px 0;border-bottom:1px solid var(--paper-line)}
-    .stop .node{margin:4px 0 0}
-    .stop .frame{margin-top:6px}
+    .stop{text-align:left;display:grid;grid-template-columns:18px minmax(0,1fr);column-gap:16px;align-items:start;padding:12px 0;border-bottom:1px solid var(--paper-line)}
+    .stop .node{margin:4px 0 0;grid-column:1;grid-row:1 / 5}
+    .stop > .age,.stop > h4,.stop > p,.stop > .frame{grid-column:2}
+    .stop p{padding:0}
+    .stop .frame{margin-top:6px;justify-self:start}
     .pillar-grid{grid-template-columns:1fr 1fr}
     .pillar:nth-child(n){transform:none}
     .lamps{grid-template-columns:repeat(2,1fr);gap:0}
@@ -507,6 +515,7 @@
   }
 </style>
 <link rel="stylesheet" href="assets/brand/branding.css?v=type3-1">
+<link rel="stylesheet" href="assets/typography.css?v=1">
 <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
@@ -559,17 +568,15 @@
       <span class="eyebrow center">Life Innovation Lab · En·Core</span>
       <p class="lede">‘앙코르’는 충분히 준비된 무대가 만들어내는 <b>‘한 번 더’의 순간</b>입니다.<br class="brk">
          인코어는 그 순간을 교육으로 옮겨, 누구나 자신의 <b>가능성을 다시 발견</b>하도록 돕습니다.</p>
-      <p class="ident">인코어는 <b>Life Innovation Lab의 생애설계 교육 프로그램</b>입니다.
-         자신의 경험과 가능성을 돌아보고, 다음 삶과 일을 구체적인 실행 계획으로 연결합니다.
-         설계의 주체는 언제나 참가자 본인입니다.</p>
+      <p class="ident"><span class="copy-sentence">인코어는 <b>Life Innovation Lab의 생애설계 교육 프로그램</b>입니다.</span> <span class="copy-sentence">자신의 경험과 가능성을 돌아보고, 다음 삶과 일을 구체적인 실행 계획으로 연결합니다.</span> <span class="copy-sentence">설계의 주체는 언제나 참가자 본인입니다.</span></p>
     </div>
     <div class="meaning">
       <div class="m reveal d1"><span class="idx">01</span><h3>가능성의 재발견</h3>
-        <p>성과나 직함만으로 자신을 평가하지 않고, 쌓아온 경험과 가능성에서 자신의 가치를 발견합니다.</p></div>
+        <p><span class="copy-line">성과나 직함만으로 자신을 평가하지 않고,</span> <span class="copy-line">쌓아온 경험과 가능성에서</span> <span class="copy-line">자신의 가치를 발견합니다.</span></p></div>
       <div class="m reveal d2"><span class="idx">02</span><h3>연결 · En</h3>
-        <p>학교와 지역사회, 기업 현장을 잇는 살아있는 교육을 지향합니다.</p></div>
+        <p><span class="copy-line">학교와 지역사회, 기업 현장을 잇는</span> <span class="copy-line">살아있는 교육을 지향합니다.</span></p></div>
       <div class="m reveal d3"><span class="idx">03</span><h3>핵심 역량 · Core</h3>
-        <p>AI를 활용하면서도 스스로 질문하고 판단하며, 선택에 책임지는 힘을 기릅니다.</p></div>
+        <p><span class="copy-line">AI를 활용하면서도</span> <span class="copy-line">스스로 질문하고 판단하며,</span> <span class="copy-line">선택에 책임지는 힘을 기릅니다.</span></p></div>
     </div>
   </div>
 </section>
@@ -597,19 +604,19 @@
       <div class="stops">
         <div class="stop"><div class="node" aria-hidden="true"></div>
           <span class="age">Act I</span><h4>학생 · 청소년</h4>
-          <p>진로를 ‘여정’으로 이해하고, 나의 강점으로 첫 무대를 연다.</p>
+          <p><span class="journey-phrase">진로를 ‘여정’으로 이해하고,</span> <span class="journey-phrase">나의 강점으로 첫 무대를 연다.</span></p>
           <span class="frame">진로 : 생애 설계</span></div>
         <div class="stop"><div class="node" aria-hidden="true"></div>
           <span class="age">Act II</span><h4>청년 · 사회초년</h4>
-          <p>정체성과 재무 습관을 세우고, 커리어를 여러 막으로 설계한다.</p>
+          <p><span class="journey-phrase">정체성과 재무 습관을 세우고,</span> <span class="journey-phrase">커리어를 여러 막으로 설계한다.</span></p>
           <span class="frame">커리어 여정</span></div>
         <div class="stop"><div class="node" aria-hidden="true"></div>
           <span class="age">Act III</span><h4>중장년 · 재직자</h4>
-          <p>전환기를 준비하며 ‘제2의 역할’을 미리 심는다.</p>
+          <p><span class="journey-phrase">전환기를 준비하며</span> <span class="journey-phrase">‘제2의 역할’을 미리 심는다.</span></p>
           <span class="frame">앵콜 커리어 탐색</span></div>
         <div class="stop"><div class="node" aria-hidden="true"></div>
           <span class="age">Encore</span><h4>은퇴 전후</h4>
-          <p>정체성·관계·의미·건강까지, 있는 조건 안에서 삶 전체를 다시 설계한다.</p>
+          <p><span class="journey-phrase">정체성·관계·의미·건강까지,</span> <span class="journey-phrase">있는 조건 안에서</span> <span class="journey-phrase">삶 전체를 다시 설계한다.</span></p>
           <span class="frame">은퇴 후 삶 설계</span></div>
       </div>
     </div>
@@ -629,21 +636,21 @@
         <span class="tag">Line A</span>
         <h3>학교 진로교육</h3>
         <span class="who">고등학생 · 진로전담교사</span>
-        <p>AI 시대 직업의 변화를 살펴보고, 자신의 강점과 관심을 진로·과목 선택에 연결합니다. 학교 여건에 맞춰 진로 탐색 활동과 캠프를 운영합니다.</p>
+        <p><span class="copy-sentence">AI 시대 직업의 변화를 살펴보고, 자신의 강점과 관심을 진로·과목 선택에 연결합니다.</span> <span class="copy-sentence">학교 여건에 맞춰 진로 탐색 활동과 캠프를 운영합니다.</span></p>
         <ul><li>AI 진로탐색</li><li>고교학점제 설계</li><li>진로체험·캠프</li></ul>
       </article>
       <article class="stage-card reveal d2">
         <span class="tag">Line B</span>
         <h3>청년 · 기업 교육</h3>
         <span class="who">청년 구직자 · 재직자</span>
-        <p>재직자는 자신의 업무에 AI를 적용하고, 청년은 경험과 강점을 이력서·포트폴리오로 표현합니다. 실습을 통해 일과 구직에 필요한 역량을 기릅니다.</p>
+        <p><span class="copy-sentence">재직자는 자신의 업무에 AI를 적용하고, 청년은 경험과 강점을 이력서·포트폴리오로 표현합니다.</span> <span class="copy-sentence">실습을 통해 일과 구직에 필요한 역량을 기릅니다.</span></p>
         <ul><li>재직자 AI 직무교육</li><li>청년 취업역량</li><li>경험·강점 정리</li></ul>
       </article>
       <article class="stage-card c-line reveal d3">
         <span class="tag">Line C</span>
         <h3>중장년 · 은퇴 교육</h3>
         <span class="who">신중년 · 퇴직 예정자</span>
-        <p>퇴직 전후의 역할과 관계, 일상과 재무 여건을 함께 돌아봅니다. 기업과 지역 교육기관의 대상에 맞춰 생애전환·AI 기초 과정을 운영합니다.</p>
+        <p><span class="copy-sentence">퇴직 전후의 역할과 관계, 일상과 재무 여건을 함께 돌아봅니다.</span> <span class="copy-sentence">기업과 지역 교육기관의 대상에 맞춰 생애전환·AI 기초 과정을 운영합니다.</span></p>
         <ul><li>C-1 앵콜 커리어 설계</li><li>C-2 인생 2막 캠프</li><li>C-3 은퇴 전환 리부트</li><li>C-4 AI 기초역량 과정</li></ul>
       </article>
     </div>
@@ -665,13 +672,13 @@
     </div>
     <div class="pillar-grid">
       <article class="pillar reveal d1"><span class="num">01</span><h3>AI 리터러시·활용</h3>
-        <p>대상과 목적에 맞춰 AI 실습을 구성하고, 결과 검토와 개인정보 보호를 함께 다룹니다.</p><span class="halo"></span></article>
+        <p><span class="copy-line">대상과 목적에 맞춰</span> <span class="copy-line">AI 실습을 구성하고,</span> <span class="copy-line">결과 검토와 개인정보 보호를</span> <span class="copy-line">함께 다룹니다.</span></p><span class="halo"></span></article>
       <article class="pillar reveal d2"><span class="num">02</span><h3>실무형 설계</h3>
-        <p>직접 탐색하고 작성하는 활동을 중심으로, 교육 이후 실천할 계획을 남기도록 설계합니다.</p><span class="halo"></span></article>
+        <p><span class="copy-line">직접 탐색하고 작성하는</span> <span class="copy-line">활동을 중심으로,</span> <span class="copy-line">교육 이후 실천할 계획을</span> <span class="copy-line">남기도록 설계합니다.</span></p><span class="halo"></span></article>
       <article class="pillar reveal d3"><span class="num">03</span><h3>경험·현장 연결</h3>
-        <p>참가자의 경험과 실제 사례를 학습에 연결합니다. 현직자 참여와 현장 체험은 기관 여건에 따라 협의합니다.</p><span class="halo"></span></article>
+        <p><span class="copy-line">참가자의 경험과 실제 사례를</span> <span class="copy-line">학습에 연결합니다.</span> <span class="copy-line">현직자 참여와 현장 체험은</span> <span class="copy-line">기관 여건에 따라 협의합니다.</span></p><span class="halo"></span></article>
       <article class="pillar reveal d4"><span class="num">04</span><h3>자기존중·주도성</h3>
-        <p>자신과 타인의 맥락을 이해하고, 내게 중요한 것을 판단하며 다음 행동을 선택하는 연습을 합니다.</p><span class="halo"></span></article>
+        <p><span class="copy-line">자신과 타인의 맥락을 이해하고,</span> <span class="copy-line">내게 중요한 것을 판단하며</span> <span class="copy-line">다음 행동을 선택하는</span> <span class="copy-line">연습을 합니다.</span></p><span class="halo"></span></article>
     </div>
   </div>
 </section>
@@ -691,19 +698,19 @@
         <article id="A-1" class="prog reveal d1">
           <span class="code">A-1</span>
           <h4>미래직업 탐험대</h4>
-          <p class="target">고등학교 1~2학년 · 4차시</p>
-          <p class="concept">“AI가 바꾸는 직업 세계를, 직접 체험하며 나만의 진로를 설계한다.”</p>
-          <p class="flexbadge">4차시 · 학급·학년 단위 · 확장 2~8차시</p>
-          <span class="out"><span class="dot"></span>산출물 · 개인 진로 로드맵</span>
+          <p class="target"><span class="copy-unit">고등학교 1~2학년</span> · <span class="copy-unit">4차시</span></p>
+          <p class="concept"><span class="copy-line">“AI가 바꾸는 직업 세계를,</span> <span class="copy-line">직접 체험하며 나만의 진로를 설계한다.”</span></p>
+          <p class="flexbadge"><span class="copy-unit">4차시</span> · <span class="copy-unit">학급·학년 단위</span> · <span class="copy-unit">확장 2~8차시</span></p>
+          <span class="out"><span class="dot"></span><span class="output-copy">산출물 · 개인 진로 로드맵</span></span>
           <a class="prog-link" href="contact.html?program=A-1">A-1 교육 문의 →</a>
         </article>
         <article id="A-2" class="prog reveal d2">
           <span class="code">A-2</span>
           <h4>고교학점제 진로설계 캠프</h4>
-          <p class="target">고등학교 1학년 · 1일 캠프</p>
-          <p class="concept">“내 진로에 맞는 과목을, 데이터와 함께 전략적으로 선택한다.”</p>
-          <p class="flexbadge">1일 캠프 6h · 또는 4차시 분산형</p>
-          <span class="out"><span class="dot"></span>산출물 · 3개년 과목 선택 계획안 + 진로설계 초안</span>
+          <p class="target"><span class="copy-unit">고등학교 1학년</span> · <span class="copy-unit">1일 캠프</span></p>
+          <p class="concept"><span class="copy-line">“내 진로에 맞는 과목을,</span> <span class="copy-line">데이터와 함께 전략적으로 선택한다.”</span></p>
+          <p class="flexbadge"><span class="copy-unit">1일 캠프 6h</span> · <span class="copy-unit">또는 4차시 분산형</span></p>
+          <span class="out"><span class="dot"></span><span class="output-copy">산출물 · 3개년 과목 선택 계획안 + 진로설계 초안</span></span>
           <a class="prog-link" href="contact.html?program=A-2">A-2 교육 문의 →</a>
         </article>
       </div>
@@ -715,19 +722,19 @@
         <article id="B-1" class="prog reveal d1">
           <span class="code">B-1</span>
           <h4>실무자 AI 활용 부트캠프</h4>
-          <p class="target">중소기업 재직자 · 1일 또는 4주</p>
-          <p class="concept">“내 업무에서 시작해, AI 활용 방법과 결과 검토 기준을 함께 만든다.”</p>
-          <p class="flexbadge">특강 3h · 1일 8h · 블렌디드 4주</p>
-          <span class="out"><span class="dot"></span>산출물 · 프롬프트 템플릿 + 업무개선 기획안</span>
+          <p class="target"><span class="copy-unit">중소기업 재직자</span> · <span class="copy-unit">1일 또는 4주</span></p>
+          <p class="concept"><span class="copy-line">“내 업무에서 시작해,</span> <span class="copy-line">AI 활용 방법과 결과 검토 기준을 함께 만든다.”</span></p>
+          <p class="flexbadge"><span class="copy-unit">특강 3h</span> · <span class="copy-unit">1일 8h</span> · <span class="copy-unit">블렌디드 4주</span></p>
+          <span class="out"><span class="dot"></span><span class="output-copy">산출물 · 프롬프트 템플릿 + 업무개선 기획안</span></span>
           <a class="prog-link" href="contact.html?program=B-1">B-1 교육 문의 →</a>
         </article>
         <article id="B-2" class="prog reveal d2">
           <span class="code">B-2</span>
           <h4>청년 취업역량 점프업</h4>
-          <p class="target">지자체 청년·구직자 · 2~3일 집중</p>
-          <p class="concept">“취업 준비 = 스펙이 아니라 ‘연결하고 증명하는 힘’.”</p>
-          <p class="flexbadge">특강 1일 · 3일 집중 · 과정형 3주</p>
-          <span class="out"><span class="dot"></span>산출물 · AI를 활용한 이력서 초안 + 취업 포트폴리오</span>
+          <p class="target"><span class="copy-unit">지자체 청년·구직자</span> · <span class="copy-unit">2~3일 집중</span></p>
+          <p class="concept"><span class="copy-line">“취업 준비 = 스펙이 아니라</span> <span class="copy-line">‘연결하고 증명하는 힘’.”</span></p>
+          <p class="flexbadge"><span class="copy-unit">특강 1일</span> · <span class="copy-unit">3일 집중</span> · <span class="copy-unit">과정형 3주</span></p>
+          <span class="out"><span class="dot"></span><span class="output-copy">산출물 · AI를 활용한 이력서 초안 + 취업 포트폴리오</span></span>
           <a class="prog-link" href="contact.html?program=B-2">B-2 교육 문의 →</a>
         </article>
       </div>
@@ -739,37 +746,37 @@
         <article id="C-1" class="prog reveal d1">
           <span class="code">C-1</span>
           <h4>앵콜 커리어 설계</h4>
-          <p class="target">50세 전후 재직자·전직 예정자 · 기업 경력지원서비스</p>
-          <p class="concept">“쌓아온 경험을 돌아보고, 퇴직 이후의 역할과 일을 탐색한다.”</p>
-          <p class="flexbadge">특강 3h · 1일 8h · 4주 과정형</p>
-          <span class="out"><span class="dot"></span>산출물 · 마음·일·돈 통합 생애전환 로드맵</span>
+          <p class="target"><span class="copy-unit">50세 전후 재직자·전직 예정자</span> · <span class="copy-unit">기업 경력지원서비스</span></p>
+          <p class="concept"><span class="copy-line">“쌓아온 경험을 돌아보고,</span> <span class="copy-line">퇴직 이후의 역할과 일을 탐색한다.”</span></p>
+          <p class="flexbadge"><span class="copy-unit">특강 3h</span> · <span class="copy-unit">1일 8h</span> · <span class="copy-unit">4주 과정형</span></p>
+          <span class="out"><span class="dot"></span><span class="output-copy">산출물 · 마음·일·돈 통합 생애전환 로드맵</span></span>
           <a class="prog-link" href="contact.html?program=C-1">C-1 교육 문의 →</a>
         </article>
         <article id="C-2" class="prog reveal d2">
           <span class="code">C-2</span>
           <h4>인생 2막 생애설계 캠프</h4>
-          <p class="target">지자체 신중년(50~64세) · 50플러스센터</p>
-          <p class="concept">“돈이 아니라 ‘어떻게 살 것인가’부터. 있는 것에서 다시 시작한다.”</p>
-          <p class="flexbadge">특강 2.5h · 1일 6h · 5주 과정형</p>
-          <span class="out"><span class="dot"></span>산출물 · 관계·건강·일상 등을 점검한 실행 로드맵</span>
+          <p class="target"><span class="copy-unit">지자체 신중년(50~64세)</span> · <span class="copy-unit">50플러스센터</span></p>
+          <p class="concept"><span class="copy-line">“돈이 아니라</span> <span class="copy-line">‘어떻게 살 것인가’부터.</span> <span class="copy-line">있는 것에서 다시 시작한다.”</span></p>
+          <p class="flexbadge"><span class="copy-unit">특강 2.5h</span> · <span class="copy-unit">1일 6h</span> · <span class="copy-unit">5주 과정형</span></p>
+          <span class="out"><span class="dot"></span><span class="output-copy">산출물 · 관계·건강·일상 등을 점검한 실행 로드맵</span></span>
           <a class="prog-link" href="contact.html?program=C-2">C-2 교육 문의 →</a>
         </article>
         <article id="C-3" class="prog reveal d3">
           <span class="code">C-3</span>
           <h4>은퇴 전환 리부트</h4>
-          <p class="target">은퇴 전후 · 역할과 일상의 변화를 경험하는 분</p>
-          <p class="concept">“달라진 일상과 관계를 돌아보고, 나에게 맞는 생활 리듬을 찾는다.”</p>
-          <p class="flexbadge">소그룹 6~10인 · 주1회×4회차 코칭</p>
-          <span class="out"><span class="dot"></span>산출물 · 나의 일상 실천 계획 + 관계 지도</span>
+          <p class="target"><span class="copy-unit">은퇴 전후</span> · <span class="copy-unit">역할과 일상의 변화를 경험하는 분</span></p>
+          <p class="concept"><span class="copy-line">“달라진 일상과 관계를 돌아보고,</span> <span class="copy-line">나에게 맞는 생활 리듬을 찾는다.”</span></p>
+          <p class="flexbadge"><span class="copy-unit">소그룹 6~10인</span> · <span class="copy-unit">주1회×4회차 코칭</span></p>
+          <span class="out"><span class="dot"></span><span class="output-copy">산출물 · 나의 일상 실천 계획 + 관계 지도</span></span>
           <a class="prog-link" href="contact.html?program=C-3">C-3 교육 문의 →</a>
         </article>
         <article id="C-4" class="prog reveal d4">
           <span class="code">C-4</span>
           <h4>AI 기초역량 과정</h4>
-          <p class="target">중장년·신중년 · 50플러스센터·지자체 평생교육</p>
-          <p class="concept">“AI는 젊은 사람만의 것이 아닙니다. 불안에서 자신감으로.”</p>
-          <p class="flexbadge">특강 2~3h · 1일 집중 5h · 주1회×5주</p>
-          <span class="out"><span class="dot"></span>산출물 · AI 안전 수칙 + 나의 AI 활용 계획서</span>
+          <p class="target"><span class="copy-unit">중장년·신중년</span> · <span class="copy-unit">50플러스센터·지자체 평생교육</span></p>
+          <p class="concept"><span class="copy-line">“AI는 젊은 사람만의 것이 아닙니다.</span> <span class="copy-line">불안에서 자신감으로.”</span></p>
+          <p class="flexbadge"><span class="copy-unit">특강 2~3h</span> · <span class="copy-unit">1일 집중 5h</span> · <span class="copy-unit">주1회×5주</span></p>
+          <span class="out"><span class="dot"></span><span class="output-copy">산출물 · AI 안전 수칙 + 나의 AI 활용 계획서</span></span>
           <a class="prog-link" href="contact.html?program=C-4">C-4 교육 문의 →</a>
         </article>
       </div>
@@ -784,9 +791,9 @@
             <span class="code">X-1</span>
             <h3>질문하는 힘</h3>
             <p class="quote">“답은 AI가 준다. 질문은 내가 한다.”</p>
-            <p class="desc">AI와 함께 답을 탐색할수록, <b>무엇을 묻고 어떻게 판단할지</b>가 중요해집니다. 내 경험에서 질문을 찾고, 근거와 다른 관점을 살펴보며, 나에게 중요한 선택을 정리합니다. Life Innovation Lab의 자기존중과 삶의 주도성을 교육으로 연결하는 공통 과정입니다.</p>
-            <p class="flexbadge">특강 2h · 1일 집중 5h · 주1회×4주 · 전 세대 적용</p>
-            <span class="out"><span class="dot"></span>산출물 · 나의 질문 목록 + 다음 행동 계획</span>
+            <p class="desc"><span class="copy-sentence">AI와 함께 답을 탐색할수록, <b>무엇을 묻고 어떻게 판단할지</b>가 중요해집니다.</span> <span class="copy-sentence">내 경험에서 질문을 찾고, 근거와 다른 관점을 살펴보며, 나에게 중요한 선택을 정리합니다.</span> <span class="copy-sentence">Life Innovation Lab의 자기존중과 삶의 주도성을 교육으로 연결하는 공통 과정입니다.</span></p>
+            <p class="flexbadge"><span class="copy-unit">특강 2h</span> · <span class="copy-unit">1일 집중 5h</span> · <span class="copy-unit">주1회×4주</span> · <span class="copy-unit">전 세대 적용</span></p>
+            <span class="out"><span class="dot"></span><span class="output-copy">산출물 · 나의 질문 목록 + 다음 행동 계획</span></span>
             <a class="prog-link" href="contact.html?program=X-1">X-1 교육 문의 →</a>
           </div>
           <div class="core-r">
@@ -816,16 +823,16 @@
     <div class="timeline">
       <div class="step lit reveal"><span class="when">첫 번째</span>
         <h4>문의와 상담</h4>
-        <p>교육 대상과 인원, 가능한 일정을 알려주세요. 예산 범위를 함께 주시면 그 안에서 가능한 방식을 정리해 드립니다. 아직 정해진 것이 없어도 괜찮습니다.</p></div>
+        <p><span class="copy-sentence">교육 대상과 인원, 가능한 일정을 알려주세요.</span> <span class="copy-sentence">예산 범위를 함께 주시면 그 안에서 가능한 방식을 정리해 드립니다.</span> <span class="copy-sentence">아직 정해진 것이 없어도 괜찮습니다.</span></p></div>
       <div class="step reveal"><span class="when">두 번째</span>
         <h4>맞춤 설계와 제안</h4>
-        <p>기관의 목적과 일정에 맞춰 차시·활동·결과물을 조정합니다. 강사·장소·실습 도구 등 운영 조건을 확인한 뒤 교육 구성과 비용을 안내합니다.</p></div>
+        <p><span class="copy-sentence">기관의 목적과 일정에 맞춰 차시·활동·결과물을 조정합니다.</span> <span class="copy-sentence">강사·장소·실습 도구 등 운영 조건을 확인한 뒤 교육 구성과 비용을 안내합니다.</span></p></div>
       <div class="step reveal"><span class="when">세 번째</span>
         <h4>교육 운영과 피드백</h4>
-        <p>협의한 범위에서 참가자가 직접 탐색하고 작성하는 활동을 진행합니다. 참가자와 담당자의 의견을 모아 난이도·시간·자료를 보완합니다.</p></div>
+        <p><span class="copy-sentence">협의한 범위에서 참가자가 직접 탐색하고 작성하는 활동을 진행합니다.</span> <span class="copy-sentence">참가자와 담당자의 의견을 모아 난이도·시간·자료를 보완합니다.</span></p></div>
       <div class="step reveal"><span class="when">네 번째</span>
         <h4>결과 정리</h4>
-        <p>협의한 활동 기록과 결과물을 정리하고, 다음 운영의 개선점을 확인합니다. 기관 보고에 필요한 자료의 범위와 형식은 사전에 협의합니다.</p></div>
+        <p><span class="copy-sentence">협의한 활동 기록과 결과물을 정리하고, 다음 운영의 개선점을 확인합니다.</span> <span class="copy-sentence">기관 보고에 필요한 자료의 범위와 형식은 사전에 협의합니다.</span></p></div>
     </div>
   </div>
 </section>
@@ -835,10 +842,10 @@
   <div class="wrap">
     <div class="head"><span class="eyebrow center">문의 전 안내</span><h2>함께 확인할 내용</h2></div>
     <div class="faq-list">
-      <details><summary>지금 교육을 신청할 수 있나요?</summary><p>네. 학교·기업·지자체 등 기관에서 9개 교육 프로그램을 신청할 수 있습니다. 희망 과정과 대상, 일정을 알려주시면 교육 구성과 운영 일정을 안내합니다.</p></details>
-      <details><summary>시간·인원·비용은 어떻게 정하나요?</summary><p>과정별 안내를 기본으로 교육 목적, 참가자의 경험, 인원, 장소와 예산에 맞춰 시간·활동·비용을 정합니다. AI 실습 도구·계정과 기기 준비 여부도 함께 협의합니다.</p></details>
-      <details><summary>어떤 과정을 골라야 할지 모르겠어요.</summary><p>문의 페이지에서 ‘상황에 맞는 과정을 추천받고 싶습니다’를 선택해 주세요. 대상과 해결하고 싶은 과제를 적어 주시면 함께 방향을 살펴보겠습니다.</p></details>
-      <details><summary>은퇴설계 교육은 무엇을 다루나요?</summary><p>역할·관계·일상과 재무 여건을 돌아보고 자신의 실행 계획을 세우는 교육입니다. 개인별 투자상품 추천이나 심리 진단·치료를 제공하는 과정은 아닙니다.</p></details>
+      <details><summary>지금 교육을 신청할 수 있나요?</summary><p><span class="copy-sentence">네. 학교·기업·지자체 등 기관에서 9개 교육 프로그램을 신청할 수 있습니다.</span> <span class="copy-sentence">희망 과정과 대상, 일정을 알려주시면 교육 구성과 운영 일정을 안내합니다.</span></p></details>
+      <details><summary>시간·인원·비용은 어떻게 정하나요?</summary><p><span class="copy-sentence">과정별 안내를 기본으로 교육 목적, 참가자의 경험, 인원, 장소와 예산에 맞춰 시간·활동·비용을 정합니다.</span> <span class="copy-sentence">AI 실습 도구·계정과 기기 준비 여부도 함께 협의합니다.</span></p></details>
+      <details><summary>어떤 과정을 골라야 할지 모르겠어요.</summary><p><span class="copy-sentence">문의 페이지에서 ‘상황에 맞는 과정을 추천받고 싶습니다’를 선택해 주세요.</span> <span class="copy-sentence">대상과 해결하고 싶은 과제를 적어 주시면 함께 방향을 살펴보겠습니다.</span></p></details>
+      <details><summary>은퇴설계 교육은 무엇을 다루나요?</summary><p><span class="copy-sentence">역할·관계·일상과 재무 여건을 돌아보고 자신의 실행 계획을 세우는 교육입니다.</span> <span class="copy-sentence">개인별 투자상품 추천이나 심리 진단·치료를 제공하는 과정은 아닙니다.</span></p></details>
     </div>
   </div>
 </section>
@@ -849,7 +856,7 @@
   <div class="wrap in reveal">
     <p class="kicker">Encore</p>
     <h2>당신의 무대에도,<br><em>앙코르</em>를 더할 시간.</h2>
-    <p>참가자에게 필요한 배움, 인코어와 함께 시작하세요.<br class="brk"> 대상과 목적, 희망 일정을 알려주시면 알맞은 프로그램과 운영 일정을 안내합니다.</p>
+    <p><span class="copy-line">참가자에게 필요한 배움, 인코어와 함께 시작하세요.</span> <span class="copy-line">대상과 목적, 희망 일정을 알려주시면</span> <span class="copy-line">알맞은 프로그램과 운영 일정을 안내합니다.</span></p>
     <div class="cta-row">
       <a class="btn btn-spot" href="contact.html">교육 문의하기 <span class="arw">→</span></a>
       <a class="btn btn-ghost" href="#program">프로그램 다시 보기</a>
